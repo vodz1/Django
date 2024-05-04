@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book List</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="background-color: rgb(129, 70, 126);">
+    <div class="container">
+        <h1 class="mt-5">Book List</h1>
+        <ul class="list-group mt-3">
+            {% for book in books %}
+                <li class="list-group-item"><a href="{% url 'book_detail' book.pk %}">{{ book.title }}</a></li>
+            {% endfor %}
+        </ul>
+        <a class="btn btn-primary mt-3" href="{% url 'book_create' %}">Add New Book</a>
+    </div>
+</body>
+</html>

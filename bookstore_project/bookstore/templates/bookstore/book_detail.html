@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ book.title }}</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="background-color: rgb(129, 70, 126);">
+    <div class="container">
+        <h1 class="mt-5">{{ book.title }}</h1>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>Description:</strong> {{ book.description }}</p>
+        <p><strong>Price:</strong> ${{ book.price }}</p>
+        <p><strong>Published Date:</strong> {{ book.published_date }}</p>
+        <a class="btn btn-primary" href="{% url 'book_update' book.pk %}">Edit</a>
+        <form action="{% url 'book_delete' book.pk %}" method="post" class="d-inline">
+            {% csrf_token %}
+            <input type="submit" value="Delete" class="btn btn-danger">
+        </form>
+    </div>
+</body>
+</html>
