@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link href="{% static 'src/styles.css' %}" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Movie Series API</title>
+  </head>
+  <body>
+    <header class="bg-indigo-500 text-white p-4">
+      <h1 class="text-2xl">Movie Series API</h1>
+    </header>
+    <main class="p-4">
+      {% block content %}
+      <!-- This is where the content of the child template will be rendered -->
+      {% endblock %}
+    </main>
+  </body>
+</html>

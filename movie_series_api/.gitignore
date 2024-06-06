@@ -1,0 +1,71 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# If you are using MySQL, PostgreSQL or other DB files
+*.db
+
+# Media and static files
+# /media
+# /static
+
+# Media files
+# /media/
+
+# Static files
+/staticfiles/
+
+# Ignore the env directory
+.env
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# If your build process includes running `npm install`, then ignore node_modules
+node_modules/
+
+# If you use PyCharm
+.idea/
+
+# If you use VS Code
+.vscode/
+
+# If you use Sublime Text
+.sublime-project
+.sublime-workspace
+
+# If you use Jupyter Notebook
+.ipynb_checkpoints
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Deployment
+.deploy/
+build/
+dist/
+
+# System files
+.DS_Store
+Thumbs.db
